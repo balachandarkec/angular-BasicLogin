@@ -4,7 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
 import {User} from '../_models';
- import { fakeBackendProvider } from '../_helpers';
+ 
 
 const users: User[] = [{ id: 1, username: 'test', password: 'test', firstname: 'Test', lastname: 'User' }];
 
