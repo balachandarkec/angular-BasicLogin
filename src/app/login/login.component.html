@@ -17,9 +17,9 @@
 
             <div class="form-group">
               <label for="username"> User Name:</label>
-              <input type="text" formControlName="username" class="form-control" [ngClass]="{'is-invalid':submitted  && f.username.errors} "/>
-               <div  *ngIf="submitted && f.username.errors" class="invali-feedback">
-                      <div *ngIf=" f.username.errors.required">username is mandatory</div>
+              <input type="text" formControlName="username" class="form-control" [ngClass]="{'is-invalid':submitted  && fc.username.errors} "/>
+               <div  *ngIf="submitted && fc.username.errors" class="invali-feedback">
+                      <div *ngIf=" fc.username.errors.required">username is mandatory</div>
                </div>
             </div>
 
@@ -27,9 +27,9 @@
 
             <div class="form-group">
                 <label for="password"> Password</label>
-                <input type="text" formControlName="password" class="form-control" [ngClass]="{'is-invalid':submitted  && f.password.errors} "/>
-                 <div  *ngIf="submitted && f.password.errors" class="invali-feedback">
-                        <div *ngIf=" f.password.errors.required">password is mandatory</div>
+                <input type="text" formControlName="password" class="form-control" [ngClass]="{'is-invalid':submitted  && fc.password.errors} "/>
+                 <div  *ngIf="submitted && fc.password.errors" class="invali-feedback">
+                        <div *ngIf=" fc.password.errors.required">password is mandatory</div>
                  </div>
               </div>
 
@@ -38,7 +38,7 @@
                   <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                   Login
               </button>
-           <div*ngIf="error" class="alert alert-danger mt-3 mb-0"></div> {{error}} </div>
+           <div *ngIf="error" class="alert alert-danger mt-3 mb-0"> {{error}} </div>
          </form>
         </div>
 
